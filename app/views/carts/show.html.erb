@@ -4,6 +4,7 @@
     <h1>My Cart</h1>
   </header>
 
+  <% unless enhanced_cart == [] %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -14,6 +15,7 @@
           <th>Price</th>
         </tr>
       </thead>
+
       <tbody>
         <% enhanced_cart.each do |item| %>
           <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
@@ -49,4 +51,12 @@
     </div>
   </div>
 
+  <% else %>
+    <div class="alert-danger">
+      <h3>Your cart is empty. <br>
+      Click <a href="/">here</a> to see products for sale
+      </h3>
+    </div>
+  <% end %>
+  
 </section>
