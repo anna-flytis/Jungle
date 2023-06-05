@@ -54,14 +54,14 @@
           >
             Admin
           </a>
-          <ul class="dropdown-menu dropdown-menu-dark">
-            <li><%= link_to 'Dashboard', [:admin, :root], class: "nav-link" %></li>
-            <li><%= link_to 'Products', [:admin, :products], class: "nav-link" %></li>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'Dashboard', [:admin, :root], class: "nav-link", style: "color: gray" %></li>
+            <li><%= link_to 'Products', [:admin, :products], class: "nav-link", style: "color: gray" %></li>
           </ul>
         </li>
         <li class="nav-item end-0">
           <%= link_to cart_path, class: "nav-link " do %> <%= fa_icon "shopping-cart" %>
-          My Cart (<%= cart.size %>) <% end %>
+          Cart (<%= cart.size %>) <% end %>
         </li>
       </ul>
     </div>
