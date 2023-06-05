@@ -111,3 +111,14 @@ form.button_to {
 .text-danger {
   color: #f38792 !important;
 }
+
+// -------------------------
+.cards {
+  display: flex;
+  .card {
+    margin: 1em;
+  }
+}
+.card-button {
+  margin: 1em;
+}
